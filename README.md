@@ -1,4 +1,15 @@
-Este código é uma calculadora simples que permite ao usuário serir dois números, escolher uma operação matemática (soma, subtração, multiplicação, potenciação ou divisão) e exibir o resultado. O programa continua rodando até que o usuário escolha sair.
+# Calculadora Simples em Python
+
+Esta é uma calculadora simples em Python que permite ao usuário inserir dois números e escolher entre várias operações matemáticas básicas. O programa continuará executando até que o usuário escolha sair.
+
+## Funcionalidades
+
+- Solicitação de dois números do usuário.
+- Validação das entradas para garantir que são números válidos.
+- Conversão das entradas para o tipo `float`.
+- Exibição de um menu de operações matemáticas disponíveis.
+- Execução da operação escolhida pelo usuário.
+- Pergunta ao usuário se deseja realizar outra operação ou sair.
 
 Para executar o arquivo `calculadora.sh`, é necessário ter um ambiente Unix-like com Bash (Bourne Again Shell) instalado. Abaixo segue informações das ações necessárias para que ele funcione corretamente.
 
@@ -42,7 +53,113 @@ Para executar o script `calculadora.sh`, siga estes passos:
      Isso iniciará a execução do script Bash. Ele primeiro atualizará os pacotes do sistema e, em seguida, tentará instalar o Python 3 se ainda não estiver instalado.
 
 5. **Siga as Instruções:**
-   - Após a instalação do Python 3 (se necessário), o script Python `calculadora.py` será executado automaticamente. Siga as instruções no terminal para usar a calculadora e realizar operações matemáticas.
+   Claro! Aqui está uma explicação detalhada para ser colocada no README do GitHub:
+
+---
+
+## Como Usar
+
+1. **Siga as instruções:**
+   - Insira o primeiro número e pressione Enter.
+   - Insira o segundo número e pressione Enter.
+   - Escolha uma operação digitando o número correspondente e pressione Enter.
+   - Veja o resultado da operação.
+   - Escolha se deseja realizar outra operação ou sair do programa.
+
+## Código Explicado
+
+Aqui está uma explicação detalhada do código:
+
+### Loop Principal
+
+O loop principal do programa permite que ele continue executando até que o usuário escolha sair.
+
+```python
+while True:
+```
+
+### Entrada de Dados
+
+O programa solicita que o usuário insira dois números. 
+
+```python
+num1 = input('Digite o primeiro número: ')
+num2 = input('Digite o segundo número: ')
+```
+
+### Validação de Entrada
+
+Verifica se as entradas são números válidos, considerando tanto ponto (`.`) quanto vírgula (`,`) como separadores decimais, e converte as entradas para o tipo `float`.
+
+```python
+if (num1.replace('.', '', 1).isdigit() or num1.replace(',', '', 1).isdigit()) and (num2.replace('.', '', 1).isdigit() or num2.replace(',', '', 1).isdigit()):
+    num1 = float(num1.replace(',', '.'))
+    num2 = float(num2.replace(',', '.'))
+else:
+    print('Por favor, insira valores númericos válidos.')
+    continue
+```
+
+### Exibição do Menu de Operações
+
+O programa exibe um menu com as operações disponíveis que o usuário pode escolher.
+
+```python
+print('\nEscolha uma operação:')
+print('1. Soma')
+print('2. Subtração')
+print('3. Multiplicação')
+print('4. Potenciação')
+print('5. Divisão')
+print('6. Sair')
+operacao = input('\nDigite o número da operação desejada: ')
+```
+
+### Execução da Operação
+
+Com base na escolha do usuário, o programa executa a operação correspondente e exibe o resultado.
+
+```python
+if operacao == '1':
+    resultado = num1 + num2
+    print(f'\nResultado da soma {resultado}\n')
+elif operacao == '2':
+    resultado = num1 - num2
+    print(f'\nResultado da subtração {resultado}\n')
+elif operacao == '3':
+    resultado = num1 * num2
+    print(f'\nResultado da multiplicação {resultado}\n')
+elif operacao == '4':
+    resultado = num1 ** num2
+    print(f'\nResultado da potenciação {resultado}\n')
+elif operacao == '5':
+    if num2 != 0:
+        resultado = num1 / num2
+        print(f'\nResultado da divisão {resultado}\n')
+    else:
+        print('Não é possivel dividir por zero.')
+elif operacao == '6':
+    print('Fechando programa.')
+    break
+else:
+    print('Operação inválida. Por favor, tente novamente.')
+```
+
+### Repetição ou Saída do Programa
+
+Após cada operação, o programa pergunta se o usuário deseja realizar outra operação ou sair. Se o usuário optar por sair, o loop principal é interrompido, encerrando o programa.
+
+```python
+while True:
+    exit = input('Você deseja realizar outra operação? (S/N): ').upper()
+    if exit in ['S', 'N']:
+        break
+    else:
+        print('Entrada inválida! Por favor, insira "S" para sim ou "N" para não.\n')
+
+if exit == 'N':
+    break
+```
 
 ### Considerações Adicionais:
 
@@ -50,3 +167,11 @@ Para executar o script `calculadora.sh`, siga estes passos:
 - Se houver erros durante a execução do script `calculadora.sh`, verifique as mensagens de erro no terminal para resolver problemas relacionados à instalação do Python 3 ou outras dependências.
 
 Seguindo esses passos, você será capaz de executar o script `calculadora.sh` com sucesso em um ambiente Unix-like.
+
+## Contribuições
+
+Sinta-se à vontade para contribuir com melhorias para este projeto. Faça um fork do repositório, crie uma nova branch para suas alterações e envie um pull request.
+
+---
+
+Essa explicação no README deve ajudar os usuários a entenderem como o código funciona e como usá-lo.
