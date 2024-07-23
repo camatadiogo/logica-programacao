@@ -52,8 +52,6 @@ Para executar o script `calculadora.sh`, siga estes passos:
      ```
      Isso iniciará a execução do script Bash. Ele primeiro atualizará os pacotes do sistema e, em seguida, tentará instalar o Python 3 se ainda não estiver instalado.
 
-5. **Siga as Instruções:**
-
 ---
 
 ## Como Usar
