@@ -170,5 +170,3 @@ Seguindo esses passos, você será capaz de executar o script `calculadora.sh` c
 Sinta-se à vontade para contribuir com melhorias para este projeto. Faça um fork do repositório, crie uma nova branch para suas alterações e envie um pull request.
 
 ---
-
-Essa explicação no README deve ajudar os usuários a entenderem como o código funciona e como usá-lo.
