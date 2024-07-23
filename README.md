@@ -1,3 +1,5 @@
+Este código é uma calculadora simples que permite ao usuário serir dois números, escolher uma operação matemática (soma, subtração, multiplicação, potenciação ou divisão) e exibir o resultado. O programa continua rodando até que o usuário escolha sair.
+
 Para executar o arquivo `calculadora.sh`, é necessário ter um ambiente Unix-like com Bash (Bourne Again Shell) instalado. Abaixo segue informações das ações necessárias para que ele funcione corretamente.
 
 ### Pré-requisitos:
